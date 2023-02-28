@@ -98,7 +98,7 @@ class VideoListItem extends StatelessWidget {
                        return GestureDetector(
                              onTap: (){
                                //BlocProvider.of<FastlaughBloc>(context)
-                                   // .add(LikeVideo(id: _index));
+                                   //.add(LikeVideo(id: _index));
                                    likedVideoIdsNotifier.value.add(_index);
                                     likedVideoIdsNotifier.notifyListeners();
                              },
