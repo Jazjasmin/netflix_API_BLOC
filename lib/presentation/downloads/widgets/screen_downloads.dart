@@ -83,8 +83,7 @@ class Section2 extends StatelessWidget {
           style: TextStyle(color: kgrey, fontSize: 14),
         ),
         height10,
-        BlocBuilder<DownloadsBloc, DownloadsState>(
-          builder: (context, state) {
+        BlocBuilder<DownloadsBloc, DownloadsState>(builder: (context, state) {
           return SizedBox(
             width: size.width,
             height: size.width,
@@ -122,8 +121,7 @@ class Section2 extends StatelessWidget {
                         radius: 8,
                       ),
                     ],
-                
-                  ),             
+                  ),
           );
         }),
       ],

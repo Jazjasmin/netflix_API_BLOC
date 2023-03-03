@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:netflix_app/core/colors/colors.dart';
 
 class NumberCard extends StatelessWidget {
-  const NumberCard({Key? key, required this.index}) : super(key: key);
+  const NumberCard({Key? key, required this.index, required this.imageUrl}) : super(key: key);
   final int index;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +22,10 @@ class NumberCard extends StatelessWidget {
               height: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                image: const DecorationImage(
+                image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: NetworkImage(
-                    "https://www.themoviedb.org/t/p/w220_and_h330_face/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg",
+                  image: NetworkImage(imageUrl
+                   // "https://www.themoviedb.org/t/p/w220_and_h330_face/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg",
                   ),
                 ),
               ),

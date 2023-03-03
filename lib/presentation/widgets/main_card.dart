@@ -11,10 +11,10 @@ class MainCard extends StatelessWidget {
       height: 250,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        image:  DecorationImage(
+        image: DecorationImage(
           fit: BoxFit.cover,
           image: NetworkImage(
-            imageUrl,  
+            imageUrl,
           ),
         ),
       ),

@@ -6,7 +6,6 @@ import 'package:netflix_app/presentation/search/title.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../application/search/search_bloc.dart';
 
-
 class SearchIdle extends StatelessWidget {
   const SearchIdle({Key? key}) : super(key: key);
 
@@ -20,35 +19,32 @@ class SearchIdle extends StatelessWidget {
         Expanded(
           child: BlocBuilder<SearchBloc, SearchState>(
             builder: (context, state) {
-              if(state.isLoading)
-              {
+              if (state.isLoading) {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
-              }else if(state.isError) {
+              } else if (state.isError) {
                 return const Center(
                   child: Text('Error while getting data'),
                 );
-              
-              }else if(state.idleList.isEmpty) {
+              } else if (state.idleList.isEmpty) {
                 return const Center(
                   child: Text('List is empty'),
-                );              
-              }else{
-              return ListView.separated(
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  final movie = state.idleList[index];
-                  return TopSearchItemTile(
-                    imageUrl: '$imageAppendUrl${movie.posterPath}', 
-                    title: movie.title ?? 'No title Provided',
+                );
+              } else {
+                return ListView.separated(
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    final movie = state.idleList[index];
+                    return TopSearchItemTile(
+                      imageUrl: '$imageAppendUrl${movie.posterPath}',
+                      title: movie.title ?? 'No title Provided',
                     );
-                },
-                separatorBuilder: (context, index) => height20,
-                itemCount: state.idleList.length,
-              );
+                  },
+                  separatorBuilder: (context, index) => height20,
+                  itemCount: state.idleList.length,
+                );
               }
-          
             },
           ),
         ),
@@ -60,11 +56,9 @@ class SearchIdle extends StatelessWidget {
 class TopSearchItemTile extends StatelessWidget {
   final String title;
   final String imageUrl;
-  const TopSearchItemTile({
-    Key? key,
-  required this.imageUrl,
-  required this.title
-  }) : super(key: key);
+  const TopSearchItemTile(
+      {Key? key, required this.imageUrl, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -75,12 +69,11 @@ class TopSearchItemTile extends StatelessWidget {
           width: screenWidth * 0.35,
           height: 65,
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                 image: NetworkImage(imageUrl)),
-                 ),
+            image: DecorationImage(
+                fit: BoxFit.cover, image: NetworkImage(imageUrl)),
+          ),
         ),
-         Expanded(
+        Expanded(
           child: Text(
             title,
             style: const TextStyle(

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'fastlaugh_bloc.dart';
 
@@ -25,9 +25,9 @@ mixin _$FastlaughEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initialize,
-    TResult Function(int id)? likeVideo,
-    TResult Function(int id)? unlikeVideo,
+    TResult? Function()? initialize,
+    TResult? Function(int id)? likeVideo,
+    TResult? Function(int id)? unlikeVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,9 +47,9 @@ mixin _$FastlaughEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initialize value)? initialize,
-    TResult Function(LikeVideo value)? likeVideo,
-    TResult Function(UnlikeVideo value)? unlikeVideo,
+    TResult? Function(Initialize value)? initialize,
+    TResult? Function(LikeVideo value)? likeVideo,
+    TResult? Function(UnlikeVideo value)? unlikeVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,34 +66,34 @@ mixin _$FastlaughEvent {
 abstract class $FastlaughEventCopyWith<$Res> {
   factory $FastlaughEventCopyWith(
           FastlaughEvent value, $Res Function(FastlaughEvent) then) =
-      _$FastlaughEventCopyWithImpl<$Res>;
+      _$FastlaughEventCopyWithImpl<$Res, FastlaughEvent>;
 }
 
 /// @nodoc
-class _$FastlaughEventCopyWithImpl<$Res>
+class _$FastlaughEventCopyWithImpl<$Res, $Val extends FastlaughEvent>
     implements $FastlaughEventCopyWith<$Res> {
   _$FastlaughEventCopyWithImpl(this._value, this._then);
 
-  final FastlaughEvent _value;
   // ignore: unused_field
-  final $Res Function(FastlaughEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $InitializeCopyWith<$Res> {
-  factory $InitializeCopyWith(
-          Initialize value, $Res Function(Initialize) then) =
-      _$InitializeCopyWithImpl<$Res>;
+abstract class _$$InitializeCopyWith<$Res> {
+  factory _$$InitializeCopyWith(
+          _$Initialize value, $Res Function(_$Initialize) then) =
+      __$$InitializeCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitializeCopyWithImpl<$Res> extends _$FastlaughEventCopyWithImpl<$Res>
-    implements $InitializeCopyWith<$Res> {
-  _$InitializeCopyWithImpl(Initialize _value, $Res Function(Initialize) _then)
-      : super(_value, (v) => _then(v as Initialize));
-
-  @override
-  Initialize get _value => super._value as Initialize;
+class __$$InitializeCopyWithImpl<$Res>
+    extends _$FastlaughEventCopyWithImpl<$Res, _$Initialize>
+    implements _$$InitializeCopyWith<$Res> {
+  __$$InitializeCopyWithImpl(
+      _$Initialize _value, $Res Function(_$Initialize) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -109,7 +109,7 @@ class _$Initialize implements Initialize {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Initialize);
+        (other.runtimeType == runtimeType && other is _$Initialize);
   }
 
   @override
@@ -128,9 +128,9 @@ class _$Initialize implements Initialize {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initialize,
-    TResult Function(int id)? likeVideo,
-    TResult Function(int id)? unlikeVideo,
+    TResult? Function()? initialize,
+    TResult? Function(int id)? likeVideo,
+    TResult? Function(int id)? unlikeVideo,
   }) {
     return initialize?.call();
   }
@@ -162,9 +162,9 @@ class _$Initialize implements Initialize {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initialize value)? initialize,
-    TResult Function(LikeVideo value)? likeVideo,
-    TResult Function(UnlikeVideo value)? unlikeVideo,
+    TResult? Function(Initialize value)? initialize,
+    TResult? Function(LikeVideo value)? likeVideo,
+    TResult? Function(UnlikeVideo value)? unlikeVideo,
   }) {
     return initialize?.call(this);
   }
@@ -189,27 +189,29 @@ abstract class Initialize implements FastlaughEvent {
 }
 
 /// @nodoc
-abstract class $LikeVideoCopyWith<$Res> {
-  factory $LikeVideoCopyWith(LikeVideo value, $Res Function(LikeVideo) then) =
-      _$LikeVideoCopyWithImpl<$Res>;
+abstract class _$$LikeVideoCopyWith<$Res> {
+  factory _$$LikeVideoCopyWith(
+          _$LikeVideo value, $Res Function(_$LikeVideo) then) =
+      __$$LikeVideoCopyWithImpl<$Res>;
+  @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class _$LikeVideoCopyWithImpl<$Res> extends _$FastlaughEventCopyWithImpl<$Res>
-    implements $LikeVideoCopyWith<$Res> {
-  _$LikeVideoCopyWithImpl(LikeVideo _value, $Res Function(LikeVideo) _then)
-      : super(_value, (v) => _then(v as LikeVideo));
+class __$$LikeVideoCopyWithImpl<$Res>
+    extends _$FastlaughEventCopyWithImpl<$Res, _$LikeVideo>
+    implements _$$LikeVideoCopyWith<$Res> {
+  __$$LikeVideoCopyWithImpl(
+      _$LikeVideo _value, $Res Function(_$LikeVideo) _then)
+      : super(_value, _then);
 
-  @override
-  LikeVideo get _value => super._value as LikeVideo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
-    return _then(LikeVideo(
-      id: id == freezed
+    return _then(_$LikeVideo(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
@@ -234,18 +236,18 @@ class _$LikeVideo implements LikeVideo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LikeVideo &&
-            const DeepCollectionEquality().equals(other.id, id));
+            other is _$LikeVideo &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
+  int get hashCode => Object.hash(runtimeType, id);
 
   @JsonKey(ignore: true)
   @override
-  $LikeVideoCopyWith<LikeVideo> get copyWith =>
-      _$LikeVideoCopyWithImpl<LikeVideo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LikeVideoCopyWith<_$LikeVideo> get copyWith =>
+      __$$LikeVideoCopyWithImpl<_$LikeVideo>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -260,9 +262,9 @@ class _$LikeVideo implements LikeVideo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initialize,
-    TResult Function(int id)? likeVideo,
-    TResult Function(int id)? unlikeVideo,
+    TResult? Function()? initialize,
+    TResult? Function(int id)? likeVideo,
+    TResult? Function(int id)? unlikeVideo,
   }) {
     return likeVideo?.call(id);
   }
@@ -294,9 +296,9 @@ class _$LikeVideo implements LikeVideo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initialize value)? initialize,
-    TResult Function(LikeVideo value)? likeVideo,
-    TResult Function(UnlikeVideo value)? unlikeVideo,
+    TResult? Function(Initialize value)? initialize,
+    TResult? Function(LikeVideo value)? likeVideo,
+    TResult? Function(UnlikeVideo value)? unlikeVideo,
   }) {
     return likeVideo?.call(this);
   }
@@ -319,36 +321,36 @@ class _$LikeVideo implements LikeVideo {
 abstract class LikeVideo implements FastlaughEvent {
   const factory LikeVideo({required final int id}) = _$LikeVideo;
 
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @JsonKey(ignore: true)
-  $LikeVideoCopyWith<LikeVideo> get copyWith =>
+  _$$LikeVideoCopyWith<_$LikeVideo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UnlikeVideoCopyWith<$Res> {
-  factory $UnlikeVideoCopyWith(
-          UnlikeVideo value, $Res Function(UnlikeVideo) then) =
-      _$UnlikeVideoCopyWithImpl<$Res>;
+abstract class _$$UnlikeVideoCopyWith<$Res> {
+  factory _$$UnlikeVideoCopyWith(
+          _$UnlikeVideo value, $Res Function(_$UnlikeVideo) then) =
+      __$$UnlikeVideoCopyWithImpl<$Res>;
+  @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class _$UnlikeVideoCopyWithImpl<$Res> extends _$FastlaughEventCopyWithImpl<$Res>
-    implements $UnlikeVideoCopyWith<$Res> {
-  _$UnlikeVideoCopyWithImpl(
-      UnlikeVideo _value, $Res Function(UnlikeVideo) _then)
-      : super(_value, (v) => _then(v as UnlikeVideo));
+class __$$UnlikeVideoCopyWithImpl<$Res>
+    extends _$FastlaughEventCopyWithImpl<$Res, _$UnlikeVideo>
+    implements _$$UnlikeVideoCopyWith<$Res> {
+  __$$UnlikeVideoCopyWithImpl(
+      _$UnlikeVideo _value, $Res Function(_$UnlikeVideo) _then)
+      : super(_value, _then);
 
-  @override
-  UnlikeVideo get _value => super._value as UnlikeVideo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
-    return _then(UnlikeVideo(
-      id: id == freezed
+    return _then(_$UnlikeVideo(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
@@ -373,18 +375,18 @@ class _$UnlikeVideo implements UnlikeVideo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UnlikeVideo &&
-            const DeepCollectionEquality().equals(other.id, id));
+            other is _$UnlikeVideo &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
+  int get hashCode => Object.hash(runtimeType, id);
 
   @JsonKey(ignore: true)
   @override
-  $UnlikeVideoCopyWith<UnlikeVideo> get copyWith =>
-      _$UnlikeVideoCopyWithImpl<UnlikeVideo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$UnlikeVideoCopyWith<_$UnlikeVideo> get copyWith =>
+      __$$UnlikeVideoCopyWithImpl<_$UnlikeVideo>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -399,9 +401,9 @@ class _$UnlikeVideo implements UnlikeVideo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initialize,
-    TResult Function(int id)? likeVideo,
-    TResult Function(int id)? unlikeVideo,
+    TResult? Function()? initialize,
+    TResult? Function(int id)? likeVideo,
+    TResult? Function(int id)? unlikeVideo,
   }) {
     return unlikeVideo?.call(id);
   }
@@ -433,9 +435,9 @@ class _$UnlikeVideo implements UnlikeVideo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initialize value)? initialize,
-    TResult Function(LikeVideo value)? likeVideo,
-    TResult Function(UnlikeVideo value)? unlikeVideo,
+    TResult? Function(Initialize value)? initialize,
+    TResult? Function(LikeVideo value)? likeVideo,
+    TResult? Function(UnlikeVideo value)? unlikeVideo,
   }) {
     return unlikeVideo?.call(this);
   }
@@ -458,9 +460,9 @@ class _$UnlikeVideo implements UnlikeVideo {
 abstract class UnlikeVideo implements FastlaughEvent {
   const factory UnlikeVideo({required final int id}) = _$UnlikeVideo;
 
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @JsonKey(ignore: true)
-  $UnlikeVideoCopyWith<UnlikeVideo> get copyWith =>
+  _$$UnlikeVideoCopyWith<_$UnlikeVideo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -479,76 +481,80 @@ mixin _$FastlaughState {
 abstract class $FastlaughStateCopyWith<$Res> {
   factory $FastlaughStateCopyWith(
           FastlaughState value, $Res Function(FastlaughState) then) =
-      _$FastlaughStateCopyWithImpl<$Res>;
+      _$FastlaughStateCopyWithImpl<$Res, FastlaughState>;
+  @useResult
   $Res call({List<Downloads> videoList, bool isLoading, bool isError});
 }
 
 /// @nodoc
-class _$FastlaughStateCopyWithImpl<$Res>
+class _$FastlaughStateCopyWithImpl<$Res, $Val extends FastlaughState>
     implements $FastlaughStateCopyWith<$Res> {
   _$FastlaughStateCopyWithImpl(this._value, this._then);
 
-  final FastlaughState _value;
   // ignore: unused_field
-  final $Res Function(FastlaughState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? videoList = freezed,
-    Object? isLoading = freezed,
-    Object? isError = freezed,
+    Object? videoList = null,
+    Object? isLoading = null,
+    Object? isError = null,
   }) {
     return _then(_value.copyWith(
-      videoList: videoList == freezed
+      videoList: null == videoList
           ? _value.videoList
           : videoList // ignore: cast_nullable_to_non_nullable
               as List<Downloads>,
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isError: isError == freezed
+      isError: null == isError
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res>
+abstract class _$$_InitialCopyWith<$Res>
     implements $FastlaughStateCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Downloads> videoList, bool isLoading, bool isError});
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$FastlaughStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$FastlaughStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, _then);
 
-  @override
-  _Initial get _value => super._value as _Initial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? videoList = freezed,
-    Object? isLoading = freezed,
-    Object? isError = freezed,
+    Object? videoList = null,
+    Object? isLoading = null,
+    Object? isError = null,
   }) {
-    return _then(_Initial(
-      videoList: videoList == freezed
-          ? _value.videoList
+    return _then(_$_Initial(
+      videoList: null == videoList
+          ? _value._videoList
           : videoList // ignore: cast_nullable_to_non_nullable
               as List<Downloads>,
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isError: isError == freezed
+      isError: null == isError
           ? _value.isError
           : isError // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -568,6 +574,7 @@ class _$_Initial implements _Initial {
   final List<Downloads> _videoList;
   @override
   List<Downloads> get videoList {
+    if (_videoList is EqualUnmodifiableListView) return _videoList;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_videoList);
   }
@@ -586,23 +593,23 @@ class _$_Initial implements _Initial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Initial &&
-            const DeepCollectionEquality().equals(other.videoList, videoList) &&
-            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
-            const DeepCollectionEquality().equals(other.isError, isError));
+            other is _$_Initial &&
+            const DeepCollectionEquality()
+                .equals(other._videoList, _videoList) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.isError, isError) || other.isError == isError));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(videoList),
-      const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(isError));
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_videoList), isLoading, isError);
 
   @JsonKey(ignore: true)
   @override
-  _$InitialCopyWith<_Initial> get copyWith =>
-      __$InitialCopyWithImpl<_Initial>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
+      __$$_InitialCopyWithImpl<_$_Initial>(this, _$identity);
 }
 
 abstract class _Initial implements FastlaughState {
@@ -612,13 +619,13 @@ abstract class _Initial implements FastlaughState {
       required final bool isError}) = _$_Initial;
 
   @override
-  List<Downloads> get videoList => throw _privateConstructorUsedError;
+  List<Downloads> get videoList;
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  bool get isError => throw _privateConstructorUsedError;
+  bool get isError;
   @override
   @JsonKey(ignore: true)
-  _$InitialCopyWith<_Initial> get copyWith =>
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
       throw _privateConstructorUsedError;
 }

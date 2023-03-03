@@ -25,31 +25,27 @@ class FastlaughBloc extends Bloc<FastlaughEvent, FastlaughState> {
   FastlaughBloc(
     IDownloadRepo _downloadService,
   ) : super(FastlaughState.initial()) {
-
     on<Initialize>((event, emit) async {
       //sending loading to UI
-      emit( const FastlaughState(
-        videoList: [], 
-        isLoading: true, 
+      emit(const FastlaughState(
+        videoList: [],
+        isLoading: true,
         isError: false,
-        
-        ));
+      ));
       // get trending movies
       final _result = await _downloadService.getDownloadsImages();
       final _state = _result.fold((f) {
-        return  FastlaughState(
-          videoList: [], 
-          isLoading: false, 
+        return FastlaughState(
+          videoList: [],
+          isLoading: false,
           isError: true,
-               
-          );
+        );
       }, (resp) {
-          return FastlaughState(
-          videoList: resp, 
-          isLoading: false, 
+        return FastlaughState(
+          videoList: resp,
+          isLoading: false,
           isError: false,
-        
-          );
+        );
       });
       //send to ui
       emit(_state);
@@ -57,12 +53,12 @@ class FastlaughBloc extends Bloc<FastlaughEvent, FastlaughState> {
 
     on<LikeVideo>((event, emit) {
       likedVideoIdsNotifier.value.add(event.id);
-          likedVideoIdsNotifier.notifyListeners();
+      likedVideoIdsNotifier.notifyListeners();
     });
 
     on<UnlikeVideo>((event, emit) {
-     likedVideoIdsNotifier.value.remove(event.id);
-           likedVideoIdsNotifier.notifyListeners();
+      likedVideoIdsNotifier.value.remove(event.id);
+      likedVideoIdsNotifier.notifyListeners();
     });
   }
 }

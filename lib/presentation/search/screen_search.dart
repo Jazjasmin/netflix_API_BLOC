@@ -56,9 +56,7 @@ class ScreenSearh extends StatelessWidget {
               } else {
                 return const SearchResult();
               }
-            }
-            )
-            ),
+            })),
           ],
         ),
       )),

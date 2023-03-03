@@ -28,4 +28,3 @@ class DownloadsRepository implements IDownloadRepo {
     }
   }
 }
- 

@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../application/search/search_bloc.dart';
 
-
 class SearchResult extends StatelessWidget {
   const SearchResult({Key? key}) : super(key: key);
 
@@ -16,23 +15,20 @@ class SearchResult extends StatelessWidget {
       children: [
         const SearchTextTitle(title: 'Movies & TV'),
         height10,
-        Expanded(
-            child: BlocBuilder<SearchBloc, SearchState>(
-              builder: (context, state) {
-                return GridView.count(
-          crossAxisCount: 3,
-          mainAxisSpacing: 8,
-          crossAxisSpacing: 8,
-          childAspectRatio: 1 / 1.4,
-          shrinkWrap: true,
-          children: List.generate(state.searchResultList.length, 
-          (index) {
-            final movie = state.searchResultList[index];
-                return MainCard(imageUrl: movie.posterImageUrl);
-          }),
-        );
-              }
-            ))
+        Expanded(child:
+            BlocBuilder<SearchBloc, SearchState>(builder: (context, state) {
+          return GridView.count(
+            crossAxisCount: 3,
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 8,
+            childAspectRatio: 1 / 1.4,
+            shrinkWrap: true,
+            children: List.generate(state.searchResultList.length, (index) {
+              final movie = state.searchResultList[index];
+              return MainCard(imageUrl: movie.posterImageUrl);
+            }),
+          );
+        }))
       ],
     );
   }
@@ -40,9 +36,7 @@ class SearchResult extends StatelessWidget {
 
 class MainCard extends StatelessWidget {
   final String imageUrl;
-  const MainCard({Key? key,
-  required this.imageUrl
-  }) : super(key: key);
+  const MainCard({Key? key, required this.imageUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

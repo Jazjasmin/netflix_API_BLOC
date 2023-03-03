@@ -5,7 +5,6 @@ part 'search_respo.g.dart';
 
 @JsonSerializable()
 class SearchRespo {
-  
   @JsonKey(name: 'results')
   List<SearchResultData> results;
 
@@ -22,7 +21,6 @@ class SearchRespo {
 
 @JsonSerializable()
 class SearchResultData {
-
   @JsonKey(name: 'id')
   int? id;
 
@@ -33,9 +31,8 @@ class SearchResultData {
   String? posterPath;
 
   String get posterImageUrl => '$imageAppendUrl$posterPath';
-  
+
   SearchResultData({
-    
     this.id,
     this.originalTitle,
     this.posterPath,
@@ -46,4 +43,3 @@ class SearchResultData {
 
   Map<String, dynamic> toJson() => _$SearchResultDataToJson(this);
 }
-
